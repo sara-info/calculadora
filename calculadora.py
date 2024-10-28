@@ -14,7 +14,7 @@ def pressionar(input):
     entrada.insert(comprimento,input) #entrada.insert(indice, texto)
     
 def separar_valores(simbolo,expressao):
-    valores = expressao.split(simbolo,1) #duvidoso.. esclarecer dúvida
+    valores = expressao.split(simbolo,1) 
     return valores #lista de valores separados pelo símbolo
 
 
@@ -27,7 +27,7 @@ def conv_graus_radiano(dado_1):
         return dado_1
         
 def cientifica(entrada_str):
-    dado = separar_valores('(',entrada_str) #['tan','180/3']
+    dado = separar_valores('(',entrada_str)
     valor_radiano = conv_graus_radiano(dado[1])
     if dado[0] == 'tan':
         resultado = round(math.tan(float(valor_radiano)),5)
@@ -44,7 +44,7 @@ def cientifica(entrada_str):
     elif dado[0] == 'log':
         resultado = math.log10(float(dado[1]))
     elif dado[0] == 'ln':
-        resultado = math.log(float(dado[1])) #nao entendi
+        resultado = math.log(float(dado[1]))
     elif dado[0] == 'deg':
         resultado = round(math.degrees(float(dado[1])),5)
         resultado = f'{resultado}' + '°'
